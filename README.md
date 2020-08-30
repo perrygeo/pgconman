@@ -24,17 +24,14 @@ export PG_CONNECTION_ALIAS="local"
 unset PGPASSWORD
 ```
 
-to allow `psql` (and any applications using `libpq`) to connect without additional arguments, relying instead on the [`$PG*` environment variables](https://www.postgresql.org/docs/current/libpq-envars.html) and the secrets stored in `~/.pgpass`.
+to allow `psql` and any other applications linked to `libpq` to connect without additional arguments. Instead they rely on the [`$PG*` environment variables](https://www.postgresql.org/docs/current/libpq-envars.html) and the secrets stored in `~/.pgpass`.
 
-```bash
-$ psql
-```
 
 ## Goals
 
 1. Uses the [`.pgpass` file](https://www.postgresql.org/docs/current/libpq-pgpass.html) to define the available connections.
 2. Provides an interactive terminal interface to select from the available connections.
-3. Sets the appropriate `PG_*` environment variables based on selection.
+3. Sets the appropriate `PG*` environment variables based on selection.
 4. Distributed as a single standalone script to simplify dependency management.
 
 
