@@ -32,7 +32,7 @@ $ psql  # use PG_* environment variables + the .pgpass file
 
 ## Goals
 
-1. Uses `.pgpass` to define the available connections.
+1. Uses the [`.pgpass` file](https://www.postgresql.org/docs/current/libpq-pgpass.html) to define the available connections.
 2. Provides an interactive terminal interface to select from the available connections.
 3. Sets the appropriate `PG_*` environment variables based on selection.
 4. Distributed as a single standalone script to simplify dependency management.
