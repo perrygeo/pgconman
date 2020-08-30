@@ -50,7 +50,7 @@ $ psql  # use PG_* environment variables + the .pgpass file
 1. Download the script
 
 ```
-wget -O ~/bin/pgconman.py https://...
+wget -O ~/bin/pgconman.py https://raw.githubusercontent.com/perrygeo/pgconman/master/pgconman.py
 ```
 
 2. Paste the following in your terminal or shell startup (e.g. `~/.bashrc`)
