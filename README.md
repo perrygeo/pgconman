@@ -42,20 +42,20 @@ $ psql  # use PG_* environment variables + the .pgpass file
 
 * A `python3` interpreter (version 3.5+)
 * A unix shell (tested in Bash)
-* A `.pgpass` file with your postgres connection info
+* A [`.pgpass`](https://www.postgresql.org/docs/current/libpq-pgpass.html) file with your postgres connection info
 * A `~/bin` directory to put the script (substitute for your bin directory of choice in the examples below)
 
 ## Installation
 
 1. Download the script
 
-```
+```bash
 wget -O ~/bin/pgconman.py https://raw.githubusercontent.com/perrygeo/pgconman/master/pgconman.py
 ```
 
 2. Paste the following in your terminal or shell startup (e.g. `~/.bashrc`)
 
-```
+```bash
 function pgconman {
     python3 ~/bin/pgconman.py
     source ~/.pg_active_connection_env.sh
